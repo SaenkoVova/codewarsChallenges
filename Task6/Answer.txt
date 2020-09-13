@@ -1,0 +1,9 @@
+function duplicateEncode(word){
+    const letters = word.toLowerCase().split('');
+    const encodedCharsets = [];
+    for (const letter of letters) {
+      let duplicate = letters.filter(i => i === letter);
+      duplicate.length > 1 ? encodedCharsets.push(')') : encodedCharsets.push('(');
+    }
+    return encodedCharsets.join('');
+}

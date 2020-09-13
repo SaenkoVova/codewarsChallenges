@@ -1,0 +1,9 @@
+function XO(str) {
+  let xQuantity = str.toLowerCase().split('').filter(i => i === 'x').length;
+  let oQuantity = str.toLowerCase().split('').filter(i => i === 'o').length;
+  if(xQuantity === oQuantity)
+    return true;
+  else if (xQuantity === 0 && oQuantity === 0)
+    return true;
+  return false;
+}

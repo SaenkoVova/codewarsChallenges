@@ -1,0 +1,16 @@
+function isValidWalk(walk) {
+    if(walk.length !== 10) return false;
+    let x = 0;
+    let y = 0;
+    walk.map(i => {
+        switch (i) {
+            case i = 'n': y++;break;
+            case i = 's': y--;break;
+            case i = 'w': x--;break;
+            case i = 'e': x++;break;
+            default: break;
+        }
+    });
+    return x === 0 && y === 0;
+}
+

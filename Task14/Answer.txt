@@ -1,0 +1,6 @@
+function firstNonRepeatingLetter(s) {
+    for(const item of s) {
+        if(s.split('').filter(i => i.toLowerCase() === item.toLowerCase()).length === 1) return item;
+    }
+    return '';
+}

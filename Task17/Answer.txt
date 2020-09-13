@@ -1,0 +1,28 @@
+function pickPeaks(arr){
+    const info = {
+        pos: [],
+        peaks: []
+    };
+    for(let i = 0; i < arr.length; i++) {
+        if(i !== 0 && i !== arr.length - 1) {
+            if(arr[i] > arr[i-1] && arr[i] >= arr[i + 1]) {
+                if(arr[i] === arr[i + 1]) {
+                    let j = i;
+                    while (arr[i] === arr[j]) {
+                        j++;
+                    }
+                    if(arr[j] < arr[i]) {
+                        info.pos.push(i);
+                        info.peaks.push(arr[i]);
+                    }
+                    i = j-1;
+                }
+                else {
+                    info.pos.push(i);
+                    info.peaks.push(arr[i]);
+                }
+            }
+        }
+    }
+    return info;
+}

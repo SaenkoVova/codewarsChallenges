@@ -1,0 +1,103 @@
+function zero(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(action[1]);
+        if(action[0] === '-') return Math.floor(0 - action[1]);
+        if(action[0] === '*') return 0;
+        if(action[0] === '/') return Math.floor(0 / action[1]);
+    }
+    return 0;
+}
+function one(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(1 + action[1]);
+        if(action[0] === '-') return Math.floor(1 - action[1]);
+        if(action[0] === '*') return Math.floor(1 * action[1]);
+        if(action[0] === '/') return Math.floor(1 / action[1]);
+    }
+    return 1;
+}
+function two(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(2 + action[1]);
+        if(action[0] === '-') return Math.floor(2 - action[1]);
+        if(action[0] === '*') return Math.floor(2 * action[1]);
+        if(action[0] === '/') return Math.floor(2 / action[1]);
+    }
+    return 2;
+}
+function three(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(3 + action[1]);
+        if(action[0] === '-') return Math.floor(3 - action[1]);
+        if(action[0] === '*') return Math.floor(3 * action[1]);
+        if(action[0] === '/') return Math.floor(3 / action[1]);
+    }
+    return 3;
+}
+function four(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(4 + action[1]);
+        if(action[0] === '-') return Math.floor(4 - action[1]);
+        if(action[0] === '*') return Math.floor(4 * action[1]);
+        if(action[0] === '/') return Math.floor(4 / action[1]);
+    }
+    return 4;
+}
+function five(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(5 + action[1]);
+        if(action[0] === '-') return Math.floor(5 - action[1]);
+        if(action[0] === '*') return Math.floor(5 * action[1]);
+        if(action[0] === '/') return Math.floor(5 / action[1]);
+    }
+    return 5;
+}
+function six(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(6 + action[1]);
+        if(action[0] === '-') return Math.floor(6 - action[1]);
+        if(action[0] === '*') return Math.floor(6 * action[1]);
+        if(action[0] === '/') return Math.floor(6 / action[1]);
+    }
+    return 6;
+}
+function seven(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(7 + action[1]);
+        if(action[0] === '-') return Math.floor(7 - action[1]);
+        if(action[0] === '*') return Math.floor(7 * action[1]);
+        if(action[0] === '/') return Math.floor(7 / action[1]);
+    }
+    return 7;
+}
+function eight(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(8 + action[1]);
+        if(action[0] === '-') return Math.floor(8 - action[1]);
+        if(action[0] === '*') return Math.floor(8 * action[1]);
+        if(action[0] === '/') return Math.floor(8 / action[1]);
+    }
+    return 8;
+}
+function nine(action) {
+    if(action) {
+        if(action[0] === '+') return Math.floor(9 + action[1]);
+        if(action[0] === '-') return Math.floor(9 - action[1]);
+        if(action[0] === '*') return Math.floor(9 * action[1]);
+        if(action[0] === '/') return Math.floor(9 / action[1]);
+    }
+    return 9;
+}
+
+function plus(number) {
+    return ['+', number];
+}
+function minus(number) {
+    return ['-', number];
+}
+function times(number) {
+    return ['*', number];
+}
+function dividedBy(number) {
+    return ['/', number];
+}

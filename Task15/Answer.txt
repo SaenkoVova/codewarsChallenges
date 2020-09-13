@@ -1,0 +1,12 @@
+function inArray(array1,array2){
+    const lexArr = [];
+    for(let itemArr1 of array1) {
+        for(let itemArr2 of array2) {
+            if(itemArr2.indexOf(itemArr1) >= 0) {
+                lexArr.push(itemArr1);
+                break;
+            }
+        }
+    }
+    return lexArr.sort();
+}

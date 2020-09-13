@@ -1,0 +1,13 @@
+function spinWords (phrase){
+  let words = phrase.split(' ');
+  let newPhrase = [];
+  for(let word of words) {
+    if(word.length >= 5) {
+      newPhrase.push(word.split('').reverse().join(''));
+    }
+    else {
+      newPhrase.push(word);
+    }
+  }
+  return newPhrase.join(' ')
+}

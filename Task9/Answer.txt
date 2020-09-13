@@ -1,0 +1,7 @@
+const toCamelCase = str =>{
+  const result = str.split(new RegExp(['_', '-'].join('|'), 'g'));
+  for (let i = 1; i < result.length; i++) {
+    result[i] = result[i].split('')[0].toUpperCase() + result[i].split('').slice(1).join('');
+  }
+  return result.join('');
+}

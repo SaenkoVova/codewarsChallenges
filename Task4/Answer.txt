@@ -1,0 +1,11 @@
+function findNextSquare(sq) {
+  if(Math.sqrt(sq) % 1 === 0) {
+    while(true) {
+      sq++;
+      if(Math.sqrt(sq) % 1 === 0) {
+        return sq;
+      }
+    }
+  }
+  return -1;
+}
