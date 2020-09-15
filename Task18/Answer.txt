@@ -1,0 +1,80 @@
+let snail = function(field) {
+    if(field.length === 0) return [];
+    const directions = ['right', 'bottom', 'left', 'top'];
+    let cells = field.length * field[0].length;
+    let xp = 0, yp = 0, turns = 0;
+    let modified = {};
+    let answer = [];
+    while(cells !== 0) {
+        modified = move(directions[turns], xp, yp, field);
+        turns > 3 ? turns = 0 : turns++;
+        xp = modified.xp;
+        yp = modified.yp;
+        field = modified.field;
+        cells -= modified.steps;
+        answer = answer.concat(modified.part);
+    }
+    return answer;
+}
+
+let move = function(direction, xp, yp, field) {
+    let steps = 0;
+    let part = [];
+    let fieldWidth = field[0].length;
+    let fieldHeight = field.length;
+    if(direction === 'right') {
+        if(xp !== 0 || yp !== 0) {
+            xp++;
+        }
+        while(xp < fieldWidth) {
+            if(field[yp][xp] === true) break;
+            part.push(field[yp][xp]);
+            field[yp][xp] = true;
+            xp++;
+            steps++;
+        }
+        xp--;
+    }
+    if(direction === 'bottom') {
+        yp++;
+        while(yp < fieldHeight) {
+            if(field[yp][xp] === true) break;
+            part.push(field[yp][xp]);
+            field[yp][xp] = true;
+            yp++;
+            steps++;
+        }
+        yp--;
+    }
+    if(direction === 'left') {
+        xp--;
+        while(xp >= 0) {
+            if(field[yp][xp] === true) break;
+            part.push(field[yp][xp]);
+            field[yp][xp] = true;
+            xp--;
+            steps++;
+        }
+        xp++;
+    }
+    if(direction === 'top') {
+        yp--;
+        while(yp >= 0) {
+            if(field[yp][xp] === true) break;
+            part.push(field[yp][xp]);
+            field[yp][xp] = true;
+            yp--;
+            steps++;
+        }
+        yp++;
+    }
+    return {xp, yp, field, steps, part};
+}
+
+
+
+
+
+let field = []
+
+console.log(snail(field));
